@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#08101d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#05070c"/>
+  <rect x="48" y="48" width="1504" height="804" rx="30" fill="url(#bg)" stroke="#17324d" stroke-width="2"/>
+  <text x="96" y="118" fill="#ffcc66" font-family="ui-monospace,Consolas,monospace" font-size="26" letter-spacing="6">APPEAL POSTURE</text>
+  <text x="96" y="196" fill="#f2f7ff" font-family="Georgia,Times New Roman,serif" font-size="62" font-weight="700">Stewardship and retention gaps stay buyer-readable.</text>
+  <text x="96" y="138" fill="#b8c9df" font-family="Segoe UI,Arial,sans-serif" font-size="30">
+    <tspan x="96" dy="0">Appeal posture flags where retention,</tspan>
+    <tspan x="96" dy="40">upgrade, or stewardship drift is already</tspan>
+    <tspan x="96" dy="40">pulling a cohort outside expected</tspan>
+    <tspan x="96" dy="40">fundraising guardrails.</tspan>
+  </text>
+  <text x="96" y="332" fill="#b8c9df" font-family="Segoe UI,Arial,sans-serif" font-size="30">
+    <tspan x="96" dy="0">Lapsed major: Escalate reactivation and</tspan>
+    <tspan x="96" dy="40">stewardship review, reduce concentration</tspan>
+    <tspan x="96" dy="40">dependence, and rebuild the evidence packet</tspan>
+    <tspan x="96" dy="40">before the next campaign cycle. | Mid-level</tspan>
+    <tspan x="96" dy="40">annual: Escalate reactivation and</tspan>
+    <tspan x="96" dy="40">stewardship review, reduce concentration</tspan>
+    <tspan x="96" dy="40">dependence, and rebuild the evidence packet</tspan>
+    <tspan x="96" dy="40">before the next campaign cycle. |</tspan>
+    <tspan x="96" dy="40">First-year digital: Escalate reactivation</tspan>
+    <tspan x="96" dy="40">and stewardship review, reduce</tspan>
+    <tspan x="96" dy="40">concentration dependence, and rebuild the</tspan>
+    <tspan x="96" dy="40">evidence packet before the next campaign</tspan>
+    <tspan x="96" dy="40">cycle. | Monthly sustainers: Increase</tspan>
+    <tspan x="96" dy="40">cohort review cadence, tighten recency</tspan>
+    <tspan x="96" dy="40">touchpoints, and validate upgrade messaging</tspan>
+    <tspan x="96" dy="40">before the next appeal.</tspan>
+  </text>
+</svg>

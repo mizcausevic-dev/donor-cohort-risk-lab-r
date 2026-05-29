@@ -1,0 +1,9 @@
+Package: donorcohortrisklabr
+Type: Package
+Title: Donor Cohort Risk Lab R
+Version: 0.1.0
+Authors@R: person("Miz", "Causevic", email = "miz@kineticgain.com", role = c("aut", "cre"))
+Description: Base-R nonprofit donor-cohort risk and appeal posture operator surface for the Kinetic Gain language atlas.
+License: AGPL-3.0-or-later
+Encoding: UTF-8
+LazyData: true
