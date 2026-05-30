@@ -226,7 +226,7 @@ overview_content <- function(result) {
     cards,
     "</div></section>",
     "<div class=\"quote\"><div class=\"lbl\">Why this matters</div><div class=\"q\">A donor cohort risk lab becomes monetizable when the same R analysis can support campaign review packets, donor-health templates, and embedded fundraising evidence work.</div></div>",
-    "<footer><div>discipline · donor cohort analytics</div><div>focus · retention / upgrades / recency / stewardship</div><div>overview snapshot</div></footer>"
+    "<footer><div>discipline · donor cohort analytics</div><div>focus · retention / upgrades / recency / stewardship</div><div>overview snapshot</div><div><a href=\"https://github.com/mizcausevic-dev/\">GitHub</a> · <a href=\"https://www.linkedin.com/in/mirzacausevic/\">LinkedIn</a> · <a href=\"https://kineticgain.com/\">Kinetic Gain</a></div></footer>"
   )
 }
 
