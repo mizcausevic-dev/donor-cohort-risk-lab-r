@@ -49,6 +49,29 @@ Kinetic Gain Embedded tie-back:
 
 This repo proves Kinetic Gain can ship statistical donor-cohort operator surfaces in `R`, not just generic RevOps wrappers. The same base-R analysis drives cohort routes, appeal posture, smoke checks, and proof assets, which makes the language-atlas signal real.
 
+## Product depth
+
+This surface is meant for fundraising, stewardship, and nonprofit leadership teams that need to explain donor health without hiding behind CRM exports. It shows where retention drift, upgrade softness, recency slippage, and unresolved stewardship gaps are putting the next appeal cycle at risk.
+
+For technical reviewers, the public proof is reproducible. One base-R analysis path creates cohort scores, the action queue, static routes, sitemap, README proof assets, and smoke-testable HTML.
+
+For GTM and diligence use, the repo can ladder into donor-health review packets, appeal-risk templates, stewardship recovery briefs, and embedded growth-operations work for foundations and mission-driven teams.
+
+## What these repos have in common
+
+Kinetic Gain repos use the same operating pattern: name the risk, attach an owner-readable evidence view, expose the next action, and keep public proof close enough to implementation that the claim can be inspected.
+
+This repo applies that pattern to donor retention and stewardship. The broader portfolio applies it to payments, KYC, grants, CAPA, diagnostics, care variation, cloud, identity, and revenue systems, but the product shape is consistent: turn messy operating complexity into a board-ready and operator-usable control plane.
+
+## Operating workflow
+
+1. Load synthetic donor-cohort and fundraising-motion data.
+2. Compare expected versus actual retention, upgrade, recency, and stewardship posture.
+3. Score each cohort for appeal and donor-health risk.
+4. Build a prioritized review queue with fundraising recommendations.
+5. Render static buyer-facing routes and README proof assets from the same analysis.
+6. Validate with tests and smoke checks before release.
+
 ## Commercial path
 
 - `Template pack planned`

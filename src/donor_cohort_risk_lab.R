@@ -142,6 +142,17 @@ status_badge <- function(status) {
   sprintf("<span class=\"status %s\">%s</span>", accent, toupper(status))
 }
 
+site_footer <- function(context = "donor cohort proof surface") {
+  paste0(
+    "<footer>",
+    "<div>", html_escape(context), "</div>",
+    "<div><a href=\"https://donors.kineticgain.com/\">donors.kineticgain.com</a></div>",
+    "<div><a href=\"https://portfolio.kineticgain.com/\">Portfolio</a> · <a href=\"https://suite.kineticgain.com/\">Suite</a> · <a href=\"https://github.com/mizcausevic-dev/donor-cohort-risk-lab-r\">Repo</a></div>",
+    "<div><a href=\"https://www.linkedin.com/in/mirzacausevic/\">LinkedIn</a> · <a href=\"https://kineticgain.com/\">Kinetic Gain</a></div>",
+    "</footer>"
+  )
+}
+
 row_html <- function(df) {
   pieces <- apply(df, 1, function(row) {
     sprintf(
@@ -225,8 +236,18 @@ overview_content <- function(result) {
     "<section class=\"section\"><div class=\"sh\"><h2>Review queue</h2><div class=\"note\">Modeled fundraising remediation sequence</div></div><div class=\"cards\">",
     cards,
     "</div></section>",
+    "<section class=\"section\"><div class=\"sh\"><h2>Product depth</h2><div class=\"note\">SaaS value architecture and GTM posture</div></div><div class=\"cards\">",
+    "<div class=\"card\"><div class=\"eyebrow\">Executive buyer value</div><h3>Donor risk becomes a board-readable decision.</h3><p>Fundraising and stewardship leaders can see where retention drift, upgrade softness, recency slippage, and unresolved stewardship gaps are putting the next appeal cycle at risk.</p></div>",
+    "<div class=\"card\"><div class=\"eyebrow\">Technical proof</div><h3>One R analysis path feeds every route.</h3><p>The same base-R functions create the cohort scores, action queue, static pages, sitemap, README assets, and smoke checks. That keeps the public proof reproducible instead of manually assembled.</p></div>",
+    "<div class=\"card\"><div class=\"eyebrow\">Commercial motion</div><h3>From lab to fundraising evidence packet.</h3><p>This can ladder into donor-health review packets, appeal-risk templates, stewardship recovery briefs, and embedded growth-operations work for foundations and mission-driven teams.</p></div>",
+    "</div></section>",
+    "<section class=\"section\"><div class=\"sh\"><h2>What these repos have in common</h2><div class=\"note\">Kinetic Gain operating pattern</div></div><div class=\"cards\">",
+    "<div class=\"card\"><div class=\"eyebrow\">Risk</div><h3>Make drift explicit.</h3><p>Each repo turns a fuzzy operating problem into a named risk surface with score, status, owner-readable context, and next-action language.</p></div>",
+    "<div class=\"card\"><div class=\"eyebrow\">Proof</div><h3>Keep evidence attached.</h3><p>The product story, synthetic data contract, generated routes, sitemap, screenshots, and validation path ship together so the claim can be inspected.</p></div>",
+    "<div class=\"card\"><div class=\"eyebrow\">Action</div><h3>Route the next move.</h3><p>The output is not another generic dashboard. It is an operator-usable control plane for what to recover, escalate, package, or simplify next.</p></div>",
+    "</div></section>",
     "<div class=\"quote\"><div class=\"lbl\">Why this matters</div><div class=\"q\">A donor cohort risk lab becomes monetizable when the same R analysis can support campaign review packets, donor-health templates, and embedded fundraising evidence work.</div></div>",
-    "<footer><div>discipline · donor cohort analytics</div><div>focus · retention / upgrades / recency / stewardship</div><div>overview snapshot</div><div><a href=\"https://github.com/mizcausevic-dev/\">GitHub</a> · <a href=\"https://www.linkedin.com/in/mirzacausevic/\">LinkedIn</a> · <a href=\"https://kineticgain.com/\">Kinetic Gain</a></div></footer>"
+    site_footer("discipline · donor cohort analytics")
   )
 }
 
@@ -244,7 +265,8 @@ cohort_lane_content <- function(result) {
               html_escape(row[["stewardship_gaps"]]),
               status_badge(row[["status"]]))
     }), collapse = ""),
-    "</tbody></table></div></section>"
+    "</tbody></table></div></section>",
+    site_footer("cohort lane · fundraising ownership")
   )
 }
 
@@ -263,7 +285,8 @@ retention_matrix_content <- function(result) {
   paste0(
     "<div class=\"topbar\"><div class=\"left\">donor cohort risk lab · retention matrix</div><div class=\"right\"><div>cohort drift by fundraising motion</div></div></div>",
     "<section class=\"hero\"><h1>Cohort drift stays readable for fundraising review.</h1><p>This route turns statistical movement into cohort-specific action cues teams can use for campaign planning, board packets, and stewardship cleanup before donor loss compounds.</p><div class=\"notice\">Synthetic demonstration data only. No real donor or CRM data is included.</div></section>",
-    "<section class=\"section\"><div class=\"cards\">", lines, "</div></section>"
+    "<section class=\"section\"><div class=\"cards\">", lines, "</div></section>",
+    site_footer("retention matrix · donor health drift")
   )
 }
 
@@ -279,7 +302,8 @@ appeal_posture_content <- function(result) {
   paste0(
     "<div class=\"topbar\"><div class=\"left\">donor cohort risk lab · appeal posture</div><div class=\"right\"><div>review queue and fundraising evidence</div></div></div>",
     "<section class=\"hero\"><h1>Appeal and stewardship posture stay auditable.</h1><p>The posture route shows which cohorts need immediate reactivation or stewardship review and where fundraising evidence should tighten before leadership treats a soft quarter as noise.</p><div class=\"notice\">This is readiness and fundraising evidence posture only. It does not claim financial audit signoff or nonprofit compliance certification.</div></section>",
-    "<section class=\"section\"><div class=\"tablewrap\"><table><thead><tr><th>Cohort</th><th>Risk score</th><th>Recommendation</th></tr></thead><tbody>", rows, "</tbody></table></div></section>"
+    "<section class=\"section\"><div class=\"tablewrap\"><table><thead><tr><th>Cohort</th><th>Risk score</th><th>Recommendation</th></tr></thead><tbody>", rows, "</tbody></table></div></section>",
+    site_footer("appeal posture · stewardship queue")
   )
 }
 
@@ -291,7 +315,8 @@ verification_content <- function(result) {
     "<div class=\"card\"><div class=\"eyebrow\">Validation</div><h3>R runtime</h3><p>Validated with Rscript demo, tests, site generation, and smoke checks.</p></div>",
     "<div class=\"card\"><div class=\"eyebrow\">Routes</div><h3>Static proof surface</h3><p>/ · /cohort-lane/ · /retention-matrix/ · /appeal-posture/ · /verification/ · /docs/</p></div>",
     "<div class=\"card\"><div class=\"eyebrow\">Commercial path</div><h3>Templates and consulting</h3><p>Template pack planned, with embedded fundraising cohort work by engagement.</p></div>",
-    "</div></section>"
+    "</div></section>",
+    site_footer("verification · generated proof")
   )
 }
 
@@ -303,7 +328,8 @@ docs_content <- function(result) {
     "<div class=\"card\"><div class=\"eyebrow\">Tier 1</div><h3>Public proof</h3><p>Open-source cohort-risk notebook and static dashboard routes with buyer-readable outputs.</p></div>",
     "<div class=\"card\"><div class=\"eyebrow\">Tier 2</div><h3>Template pack planned</h3><p>Donor cohort review packets, retention drift decks, and stewardship starter templates.</p></div>",
     "<div class=\"card\"><div class=\"eyebrow\">Tier 4</div><h3>Embedded by engagement</h3><p>Kinetic Gain can adapt the notebook for a nonprofit, foundation, or mission-driven fundraising team.</p></div>",
-    "</div></section>"
+    "</div></section>",
+    site_footer("docs · nonprofit evidence operations")
   )
 }
 
